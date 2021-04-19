@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <%- include('../partials/head'); %>
@@ -10,9 +10,33 @@
         <%- include('../partials/header'); %>
     </header>
     <div class="container">
+        <h3 id="registerproduct" class="text-center">Register product</h3>
+        <!-- <i class="fab fa-product-hunt"></i> -->
         <div class="row justify-content-center">
-            <div class="col">
-                <h1>Hello, world!</h1>
+            <div class="col col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="productname">Product Name</label>
+                        <input type="text" class="form-control" name="produtname" id="productname" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="productdescription">Description</label>
+                        <input type="text" class="form-control" name="productdescription" id="productdescription">
+                    </div>
+                    <div class="form-group">
+                        <label for="productamount">Amount</label>
+                        <input type="text" class="form-control" name="productamount" id="productamount">
+                    </div>
+                    <div class="form-group">
+                        <label for="productprovider">Provider</label>
+                        <input type="text" class="form-control" name="productprovider" id="productprovider">
+                    </div>
+                    <div class="form-group">
+                        <label for="productdate">Date</label>
+                        <input type="date" class="form-control" id="productdate">
+                    </div>
+                    <button type="submit" id="registerbtn" class="btn btn-primary">Register</button>
+                </form>
             </div>
         </div>
     </div>
@@ -24,7 +48,9 @@
 
     <!-- Option 1: Jquery Import and Bootstrap JS -->
     <script>
-        console.log('abc');
+        $('form').submit(function () {
+            $(this)[0].reset();
+        });
     </script>
 </body>
 
