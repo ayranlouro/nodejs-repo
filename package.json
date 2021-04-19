@@ -13,6 +13,7 @@
   "dependencies": {
     "body-parser": "*",
     "express": "*",
-    "nodemon": "*"
+    "nodemon": "*",
+    "ejs": "*"
   }
 }
