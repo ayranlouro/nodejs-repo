@@ -11,6 +11,7 @@
     </header>
 
     <div class="container">
+
         <h3 id="listpage" class="text-center">List page</h3>
         <div class="row justify-content-center">
             <div class="col col-8">
@@ -27,19 +28,25 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <form action="/list" method="POST">
-                                <td><button type="submit" name="abc" value="ayran" class="btn btn-danger text-center">Delete</button></td>
-                            </form>
-                        </tr>
+                        <% for ( let index=0; index < 3; index++ ) { %>
+                            <tr id="<% index %>">
+                                <th scope="row" value="teste">
+                                    <%= index %>
+                                </th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td>@mdo</td>
+                                <td><button type="submit" name="danger" id="danger" value="<%= index %>"
+                                        class="btn btn-danger text-center">Delete</button></td>
+                            </tr>
+                            <% } %>
                     </tbody>
                 </table>
+                
+                <div id="resposta"></div>
+                
             </div>
         </div>
     </div>
@@ -49,9 +56,7 @@
     </footer>
 
     <!-- Option 1: Jquery Import and Bootstrap JS -->
-    <script>
-
-    </script>
+    <script src="static/list.js"></script>
 </body>
 
 </html>
