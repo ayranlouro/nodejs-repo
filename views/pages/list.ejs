@@ -14,7 +14,7 @@
 
         <h3 id="listpage" class="text-center">List page</h3>
         <div class="row justify-content-center">
-            <div class="col col-8">
+            <div class="col col">
                 <table class="table table-hover table-bordered">
                     <thead>
                         <tr>
@@ -33,11 +33,11 @@
                                 <th scope="row" value="teste">
                                     <%= index %>
                                 </th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>@mdo</td>
-                                <td>@mdo</td>
+                                <td><%= data[index].productname %></td>
+                                <td><%= data[index].productdescription %></td>
+                                <td><%= data[index].productamount %></td>
+                                <td><%= data[index].productprovider %></td>
+                                <td><%= data[index].productdate %></td>
                                 <td><button type="submit" name="edit" id="edit" value="<%= index %>"
                                         class="btn btn-info text-center">Edit</button><button type="submit"
                                         name="danger" id="danger" value="<%= index %>"

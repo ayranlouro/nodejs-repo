@@ -51,7 +51,7 @@ app.post('/apple', async (req, res) => {
     
     console.log(req.body);
     
-    res.send('Data: ' + req.body.productname5);
+    res.redirect('/list');
 });
 
 app.listen(80, () => {
